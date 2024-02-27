@@ -12,6 +12,8 @@ export default {
       'darkGrayishBlue': 'hsl(219deg , 9%, 45%)',
       'grayishBlue': 'hsl(220deg , 14%, 75%)',
       'lightGrayishBlue': 'hsl(223deg , 64%, 98%)',
+      'white': 'hsl(0, 0%, 100%)',
+      'black': 'hsl(0, 0%, 0%)' 
     },
     fontFamily: {
       display : ['Kumbh Sans', 'sans-serif']
