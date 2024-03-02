@@ -20,8 +20,61 @@ const Gallery = () => {
     ]
 
     const[index, setIndex] = useState(0) 
-    const[show, setShow] = useState(true) 
+    const[hover1, setHover1] = useState(true) 
+    const[hover2, setHover2] = useState(true) 
+    const[hover3, setHover3] = useState(true) 
+    const[hover4, setHover4] = useState(true) 
 
+    const[click1, setClick1] = useState(true) 
+    const[click2, setClick2] = useState(true) 
+    const[click3, setClick3] = useState(true) 
+    const[click4, setClick4] = useState(true) 
+
+    const Clicked1 = () => {
+
+        setIndex( 0 );
+        setHover1(true);
+        setClick1(false);
+        setClick2(true);
+        setClick3(true);
+        setClick4(true);
+
+    }
+
+    const Clicked2 = () => {
+
+        setIndex( 1 );
+        setHover2(true);
+        setClick1(true);
+        setClick2(false);
+        setClick3(true);
+        setClick4(true);
+
+    }
+
+    const Clicked3 = () => {
+
+        setIndex( 2 );
+        setHover3(true);
+        setClick1(true);
+        setClick2(true);
+        setClick3(false);
+        setClick4(true);
+
+    }
+
+    const Clicked4 = () => {
+
+        setIndex( 3 );
+        setHover4(true);
+        setClick1(true);
+        setClick2(true);
+        setClick3(true);
+        setClick4(false);
+
+    }
+
+    
     return (
 
         <div className="w-full">
@@ -29,21 +82,25 @@ const Gallery = () => {
                 <img src={ data[index] } className="rounded-xl"/>
             </div>
             <div className="flex gap-6">
-                <button onClick={ () => setIndex( 0 )} className="relative" >
-                    <img src={ Producto1Chico } className="rounded-lg focus:border-2"/>
-                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-40" hidden={show}></div>
+                <button onClick={ Clicked1 } className="relative" onMouseOver={ () => click1 ? setHover1(false) : null } onMouseLeave={ () => click1 ? setHover1(true) : null } >
+                    <img src={ Producto1Chico } className="rounded-lg"/>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-25" hidden={hover1}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-50 border-orange border-2" hidden={click1}></div>
                 </button>
-                <button onClick={ () => setIndex( 1 ) } className="relative">
+                <button onClick={ Clicked2 } className="relative" onMouseOver={ () => click2 ? setHover2(false) : null } onMouseLeave={ () => click2 ? setHover2(true) : null }>
                     <img src={ Producto2Chico } className="rounded-lg"/>
-                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-40" hidden={show}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-25" hidden={hover2}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-50 border-orange border-2" hidden={click2}></div>
                 </button>
-                <button onClick={ () => setIndex( 2 ) } className="relative">
+                <button onClick={ Clicked3 } className="relative" onMouseOver={ () => click3 ? setHover3(false) : null } onMouseLeave={ () => click3 ? setHover3(true) : null }>
                     <img src={ Producto3Chico } className="rounded-lg"/>
-                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-40" hidden={show}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-25" hidden={hover3}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-50 border-orange border-2" hidden={click3}></div>
                 </button>
-                <button onClick={ () => setIndex( 3 ) } className="relative">
+                <button onClick={ Clicked4 } className="relative" onMouseOver={ () => click4 ? setHover4(false) : null } onMouseLeave={ () => click4 ? setHover4(true) : null }>
                     <img src={ Producto4Chico } className="rounded-lg"/>
-                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-40" hidden={show}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-25" hidden={hover4}></div>
+                    <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-50 border-orange border-2" hidden={click4}></div>
                 </button>
             </div>
         </div>
