@@ -1,7 +1,8 @@
 import Minus from './assets/icon-minus.svg?react'
 import Plus from './assets/icon-plus.svg?react'
 import Carrito from './assets/icon-cart.svg?react'
-import { useState } from "react"
+import { useContext, useState } from "react"
+import { CantidadContext } from './main'
 
 const Select = () => {
 
@@ -11,6 +12,15 @@ const Select = () => {
     const[show2, setShow2] = useState(true);
     const[show3, setShow3] = useState(true);
 
+    const { cantidad, setCantidad } = useContext (CantidadContext);
+
+    const precio = 125.00;
+    const producto = "Fall Limited Edition Sneakers"
+
+    function handle() {
+        setCantidad(cantidad + items);
+    }
+
     return(
 
         <div className="w-full">
@@ -18,14 +28,14 @@ const Select = () => {
                 <h3 className="text-orange font-bold text-xs tracking-wide">SNEAKER COMPANY</h3>
             </div>
             <div className='mb-5'>
-                <h1 className="text-4xl font-bold text-veryDarkBlue tracking-wide">Fall Limited Edition Sneakers</h1>
+                <h1 className="text-4xl font-bold text-veryDarkBlue tracking-wide">{producto}</h1>
             </div>
             <div className='mb-4'>
                 <p className="text-sm text-darkGrayishBlue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque doloremque ducimus corrupti, necessitatibus sed voluptatum accusamus officia enim vel quibusdam dignissimos blanditiis, at odit.</p>
             </div>
             <div className='mb-4'>
                 <div className="flex items-center gap-3">
-                    <p className="text-2xl font-bold text-veryDarkBlue">$125.00</p>
+                    <p className="text-2xl font-bold text-veryDarkBlue">${precio}</p>
                     <div className="bg-paleOrange h-auto p-1 pt-0 rounded-md">
                         <p className="text-orange leading-4 font-bold">50%</p>
                     </div>
@@ -49,7 +59,7 @@ const Select = () => {
                     </button>
                 </div>
                 <div className='w-full'>
-                    <button className="bg-orange h-full rounded-md text-white font-semibold leading-3 w-full relative" onMouseOver={ () => setShow1( false ) } onMouseLeave={ () => setShow1( true ) } >
+                    <button className="bg-orange h-full rounded-md text-white font-semibold leading-3 w-full relative" onMouseOver={ () => setShow1( false ) } onMouseLeave={ () => setShow1( true ) } onClick={ () => handle() }>
                         <><Carrito className="fill-white inline mr-3"/>Add to cart</>
                         <div className='absolute top-0 bg-paleOrange bg-opacity-25 w-full h-full rounded-md' hidden={show1}></div>
                     </button>
