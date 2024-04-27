@@ -25,23 +25,25 @@ const Select = () => {
 
         <div className="w-full">
             <div className='mb-3'>
-                <h3 className="text-orange font-bold text-xs tracking-wide">SNEAKER COMPANY</h3>
+                <h3 className="text-orange font-bold text-xs tracking-wide text-center lg:text-left">SNEAKER COMPANY</h3>
             </div>
             <div className='mb-5'>
-                <h1 className="text-4xl font-bold text-veryDarkBlue tracking-wide">{producto}</h1>
+                <h1 className="text-4xl font-bold text-veryDarkBlue tracking-wide text-center lg:text-left">{producto}</h1>
             </div>
             <div className='mb-4'>
-                <p className="text-sm text-darkGrayishBlue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque doloremque ducimus corrupti, necessitatibus sed voluptatum accusamus officia enim vel quibusdam dignissimos blanditiis, at odit.</p>
+                <p className="text-sm text-darkGrayishBlue text-center lg:text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque doloremque ducimus corrupti, necessitatibus sed voluptatum accusamus officia enim vel quibusdam dignissimos blanditiis, at odit.</p>
             </div>
-            <div className='mb-4'>
-                <div className="flex items-center gap-3">
-                    <p className="text-2xl font-bold text-veryDarkBlue">${precio}</p>
-                    <div className="bg-paleOrange h-auto p-1 pt-0 rounded-md">
-                        <p className="text-orange leading-4 font-bold">50%</p>
+            <div className='flex justify-center lg:block'>
+                <div className='mb-4'>
+                    <div className="flex items-center gap-3">
+                        <p className="text-2xl font-bold text-veryDarkBlue">${precio}</p>
+                        <div className="bg-paleOrange h-auto p-1 pt-0 rounded-md">
+                            <p className="text-orange leading-4 font-bold">50%</p>
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <p className="text-grayishBlue line-through text-xl font-bold">$250</p>
+                    <div>
+                        <p className="text-grayishBlue line-through text-xl font-bold">$250</p>
+                    </div>
                 </div>
             </div>
             <div className="w-full flex gap-5">
