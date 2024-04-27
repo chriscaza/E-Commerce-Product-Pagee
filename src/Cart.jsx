@@ -6,7 +6,7 @@ import Delete from './assets/icon-delete.svg?react'
 
 const Cart = ({show}) => {
 
-    const { cantidad } = useContext( CantidadContext );
+    const { cantidad, setCantidad } = useContext( CantidadContext );
     //Estos datos estan aquí declarados porque en el caso que fuera un ecommerce real esto se debería obtener de una base de datos
     //El componente de Select solo debería mandar el SKU del producto y la CANTIDAD
     const precio = 125.00;
@@ -33,7 +33,7 @@ const Cart = ({show}) => {
                         <p className='inline'>${precio} x {cantidad}</p><p className='font-bold inline'> ${precio*cantidad}</p>
                     </div>
                     <div>
-                        <button>
+                        <button onClick={ () => setCantidad(0) }>
                             <Delete className="fill-darkGrayishBlue hover:fill-veryDarkBlue"/>
                         </button>
                     </div>

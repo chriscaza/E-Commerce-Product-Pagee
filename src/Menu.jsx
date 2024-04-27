@@ -2,11 +2,13 @@ import Logo from './assets/logo.svg?react'
 import Carrito from './assets/icon-cart.svg?react'
 import Avatar from './assets/image-avatar.png'
 import Cart from './Cart'
-import { useState } from "react"
+import { useState, useContext } from "react"
+import { CantidadContext } from "./main"
 
 const Menu = () => {
 
     const[bandera, setBandera] = useState(true);
+    const { cantidad } = useContext( CantidadContext );
 
     return (
         
@@ -27,8 +29,9 @@ const Menu = () => {
                     <div>
                         <div className='flex items-center'>
                             <div>
-                                <button onClick={ () => setBandera(!bandera) }>
+                                <button onClick={ () => setBandera(!bandera) } className='relative'>
                                     <Carrito className="fill-darkGrayishBlue hover:fill-veryDarkBlue"/>
+                                    {cantidad > 0 && <div className='bg-orange text-xs font-medium text-white rounded-full leading-3 absolute -top-1 -right-1 px-1'>{cantidad}</div>}
                                 </button>
                             </div>
 
