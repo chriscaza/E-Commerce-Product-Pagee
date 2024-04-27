@@ -15,7 +15,7 @@ const Menu = () => {
             <div className='w-screen h-24 flex justify-center'>
                 <div className='w-3/4 flex items-center justify-between border-b-2 border-grayishBlue relative'>
                     <div className='h-full flex items-center'>
-                        <div className='mr-7'>
+                        <div className='mr-3 lg:mr-7'>
                             <Logo/>
                         </div>
                         <div className='h-full flex items-center'>
@@ -35,7 +35,7 @@ const Menu = () => {
                                 </button>
                             </div>
 
-                            <div className='ml-7'>
+                            <div className='ml-3 lg:ml-7'>
                                 <button>
                                     <img src={Avatar} alt="Avatar" className='w-12 hover:border-2 hover:border-orange rounded-full'/>
                                 </button>

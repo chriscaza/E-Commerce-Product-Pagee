@@ -81,7 +81,7 @@ const Gallery = () => {
             <div className="w-full mb-6">
                 <img src={ data[index] } className="rounded-xl"/>
             </div>
-            <div className="flex gap-6">
+            <div className="flex gap-5 lg:gap-6">
                 <button onClick={ Clicked1 } className="relative" onMouseOver={ () => click1 ? setHover1(false) : null } onMouseLeave={ () => click1 ? setHover1(true) : null } >
                     <img src={ Producto1Chico } className="rounded-lg"/>
                     <div className="bg-paleOrange w-full h-full rounded-lg absolute top-0 bg-opacity-25" hidden={hover1}></div>
