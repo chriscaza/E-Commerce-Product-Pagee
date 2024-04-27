@@ -17,6 +17,9 @@ export default {
     },
     fontFamily: {
       display : ['Kumbh Sans', 'sans-serif']
+    },
+    backgroundImage: {
+      'fondo': "url('/src/assets/fondo.png')",
     }
   },
   plugins: [],

@@ -1,8 +1,7 @@
 import React, { createContext, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import Menu from './Menu'
-import Shop from  './Shop'
+import Sneakers from './Sneakers';
 
 //Create a new context and export
 export const CantidadContext = createContext();
@@ -21,8 +20,7 @@ const CantidadContextProvider = ({ children }) => {
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <CantidadContextProvider>
-      <Menu />
-      <Shop />
+      <Sneakers/>
     </CantidadContextProvider>
   </React.StrictMode>,
 )

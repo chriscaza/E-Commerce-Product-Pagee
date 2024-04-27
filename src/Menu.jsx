@@ -12,7 +12,7 @@ const Menu = () => {
 
     return (
         
-            <div className='w-screen h-24 flex justify-center'>
+            <div className='w-full h-24 flex justify-center'>
                 <div className='w-3/4 flex items-center justify-between border-b-2 border-grayishBlue relative'>
                     <div className='h-full flex items-center'>
                         <div className='mr-3 lg:mr-7'>
