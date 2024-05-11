@@ -15,7 +15,7 @@ const Menu = () => {
 
     return (
         
-            <div className='w-full h-24 flex justify-center'>
+            <div className='w-full h-14 md:h-24 flex justify-center'>
                 <div className='w-full md:w-3/4 flex items-center justify-between md:border-b-2 md:border-grayishBlue relative'>
                     <div className='h-full w-full flex items-center pl-6 md:pl-0 relative md:static'>
                         <button className='md:hidden' onClick={ () => setMenu(false) }>
